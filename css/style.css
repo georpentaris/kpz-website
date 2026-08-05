@@ -174,3 +174,9 @@ footer {
     color: #d4af37;
 
 }
+
+html {
+
+    scroll-behavior: smooth;
+
+}
