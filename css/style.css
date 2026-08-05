@@ -11,16 +11,28 @@ body {
 
 header {
 
-    background: black;
+    position: fixed;
 
-    color: white;
+    top: 0;
 
-    padding: 20px;
+    width: 100%;
+
+    background: rgba(0, 0, 0, 0.75);
+
+    backdrop-filter: blur(10px);
+
+    z-index: 1000;
 
 }
 
 
 nav {
+
+    max-width: 1200px;
+
+    height: 80px;
+
+    margin: auto;
 
     display: flex;
 
@@ -28,28 +40,9 @@ nav {
 
     align-items: center;
 
-}
-
-
-ul {
-
-    list-style: none;
-
-    display: flex;
-
-    gap: 20px;
+    padding: 0 30px;
 
 }
-
-
-a {
-
-    color: white;
-
-    text-decoration: none;
-
-}
-
 
 main {
 
@@ -68,7 +61,9 @@ footer {
 
 .hero {
 
-    height: 80vh;
+    height: 100vh;
+
+    padding-top: 80px;
 
     display: flex;
 
@@ -139,3 +134,43 @@ footer {
 
 }
 
+.logo {
+
+    color: white;
+
+    font-size: 28px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+}
+
+.nav-links {
+
+    display: flex;
+
+    list-style: none;
+
+    gap: 35px;
+
+}
+
+.nav-links a {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 18px;
+
+    transition: 0.3s;
+
+}
+
+
+.nav-links a:hover {
+
+    color: #d4af37;
+
+}
