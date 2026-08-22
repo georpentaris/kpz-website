@@ -1,11 +1,20 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-
     font-family: Arial, sans-serif;
-
     margin: 0;
-
     padding: 0;
+    overflow-x: hidden;
+}
 
+main {
+    padding: 0;
 }
 
 
@@ -44,35 +53,23 @@ nav {
 
 }
 
-main {
-
-    padding: 40px;
-
-}
-
 
 .hero {
-
-    height: 100vh;
-
-    padding-top: 80px;
+    min-height: 100vh;
 
     display: flex;
-
     justify-content: center;
-
     align-items: center;
 
     text-align: center;
 
     background-image: url("../images/hero.jpg");
-
     background-size: cover;
-
     background-position: center;
 
     position: relative;
 
+    padding: 100px 20px 40px;
 }
 
 .hero::before {
@@ -95,13 +92,18 @@ main {
 
 
 .hero-content {
-
     position: relative;
+    z-index: 1;
 
     color: white;
 
+    max-width: 900px;
 }
 
+.hero-content h2 {
+    font-size: 64px;
+    margin: 0 0 20px;
+}
 
 .hero-content p {
 
@@ -196,54 +198,6 @@ html {
 
 }
 
-@media (max-width: 768px) {
-
-
-    .menu-toggle {
-
-        display: flex;
-
-    }
-
-
-    .nav-links {
-
-        display: none;
-
-    }
-
-    .nav-links.active {
-
-        display: flex;
-
-        position: absolute;
-
-        top: 80px;
-
-        left: 0;
-
-        width: 100%;
-
-        background: black;
-
-        flex-direction: column;
-
-        align-items: center;
-
-        padding: 30px 0;
-
-    }
-
-    .biography {
-
-        grid-template-columns: 1fr;
-
-        text-align: center;
-
-    }
-
-}
-
 .biography {
 
     display: grid;
@@ -258,7 +212,6 @@ html {
 
 }
 
-
 .bio-image img {
 
     width: 100%;
@@ -267,11 +220,9 @@ html {
 
 }
 
-
 .bio-text {
     color: black;
 }
-
 
 .bio-text h2 {
 
@@ -280,7 +231,6 @@ html {
     margin-bottom: 20px;
 
 }
-
 
 .bio-text p {
 
@@ -298,7 +248,6 @@ html {
 
 }
 
-
 .section-title {
 
     text-align: center;
@@ -306,7 +255,6 @@ html {
     margin-bottom: 60px;
 
 }
-
 
 .section-label {
 
@@ -320,7 +268,6 @@ html {
 
 }
 
-
 .section-title h2 {
 
     color: white;
@@ -330,7 +277,6 @@ html {
     margin-top: 10px;
 
 }
-
 
 .works-grid {
 
@@ -342,7 +288,6 @@ html {
 
 }
 
-
 .work-card {
 
     background: #1a1a1a;
@@ -353,13 +298,11 @@ html {
 
 }
 
-
 .work-card:hover {
 
     transform: translateY(-8px);
 
 }
-
 
 .work-card img {
 
@@ -373,13 +316,11 @@ html {
 
 }
 
-
 .work-content {
 
     padding: 25px;
 
 }
-
 
 .work-content h3 {
 
@@ -391,7 +332,6 @@ html {
 
 }
 
-
 .work-content p {
 
     color: #aaa;
@@ -399,7 +339,6 @@ html {
     margin-bottom: 20px;
 
 }
-
 
 .work-link {
 
@@ -410,7 +349,6 @@ html {
     transition: opacity 0.3s ease;
 
 }
-
 
 .work-link:hover {
 
@@ -431,7 +369,6 @@ html {
     gap: 60px;
 }
 
-
 .listen-links a {
     color: #f5f5f5;
 
@@ -445,7 +382,6 @@ html {
     transition: color 0.3s ease;
 }
 
-
 .listen-links a:hover {
     color: #d4af37;
 }
@@ -457,7 +393,6 @@ html {
     color: #f5f5f5;
 }
 
-
 .contact-description {
     max-width: 600px;
     margin: 0 auto 30px;
@@ -467,7 +402,6 @@ html {
 
     color: #aaa;
 }
-
 
 .contact-email {
     display: inline-block;
@@ -482,11 +416,9 @@ html {
     transition: opacity 0.3s ease;
 }
 
-
 .contact-email:hover {
     opacity: 0.7;
 }
-
 
 .social-links {
     display: flex;
@@ -496,7 +428,6 @@ html {
     gap: 40px;
 }
 
-
 .social-links a {
     color: #f5f5f5;
 
@@ -504,7 +435,6 @@ html {
 
     transition: color 0.3s ease;
 }
-
 
 .social-links a:hover {
     color: #d4af37;
@@ -519,7 +449,6 @@ html {
     color: #f5f5f5;
 }
 
-
 .footer-logo {
     font-size: 30px;
     font-weight: bold;
@@ -528,7 +457,6 @@ html {
 
     margin-bottom: 15px;
 }
-
 
 .footer-tagline {
     color: #aaa;
@@ -540,9 +468,204 @@ html {
     margin-bottom: 35px;
 }
 
-
 .footer-copyright {
     color: #666;
 
     font-size: 13px;
+}
+
+@media (max-width: 768px) {
+
+    /* NAVIGATION */
+
+    nav {
+        height: 70px;
+        padding: 0 20px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .menu-toggle {
+        display: flex;
+        position: relative;
+        z-index: 1001;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+
+        position: absolute;
+
+        top: 70px;
+        left: 0;
+
+        width: 100%;
+
+        margin: 0;
+        padding: 30px 0;
+
+        background: rgba(0, 0, 0, 0.95);
+
+        flex-direction: column;
+        align-items: center;
+
+        gap: 25px;
+    }
+
+    .nav-links a {
+        font-size: 18px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: 100svh;
+
+        padding: 90px 20px 40px;
+
+        background-position: center;
+    }
+
+    .hero-content h2 {
+        font-size: 44px;
+    }
+
+    .hero-content p {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    .button {
+        padding: 12px 22px;
+    }
+
+
+    /* BIOGRAPHY */
+
+    .biography {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        padding: 80px 20px;
+
+        text-align: left;
+    }
+
+    .bio-image img {
+        width: 100%;
+        height: auto;
+
+        border-radius: 8px;
+    }
+
+    .bio-text h2 {
+        font-size: 36px;
+    }
+
+    .bio-text p {
+        font-size: 17px;
+        line-height: 1.7;
+    }
+
+
+    /* GENERAL SECTION TITLES */
+
+    .section-title {
+        margin-bottom: 40px;
+    }
+
+    .section-title h2 {
+        font-size: 36px;
+    }
+
+    .section-label {
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+
+
+    /* WORKS */
+
+    .works {
+        padding: 80px 20px;
+    }
+
+    .works-grid {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+    .work-card img {
+        height: auto;
+        aspect-ratio: 1 / 1;
+
+        object-fit: cover;
+    }
+
+
+    /* LISTEN */
+
+    .listen {
+        padding: 80px 20px;
+    }
+
+    .listen-links {
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 30px;
+    }
+
+    .listen-links a {
+        font-size: 20px;
+    }
+
+
+    /* CONTACT */
+
+    .contact {
+        padding: 80px 20px;
+    }
+
+    .contact-description {
+        font-size: 17px;
+    }
+
+    .contact-email {
+        font-size: 19px;
+
+        overflow-wrap: anywhere;
+    }
+
+    .social-links {
+        flex-wrap: wrap;
+
+        gap: 25px;
+    }
+
+
+    /* FOOTER */
+
+    .footer {
+        padding: 60px 20px 35px;
+    }
+
+    .footer-logo {
+        font-size: 27px;
+    }
+
+    .footer-tagline {
+        line-height: 1.7;
+    }
+
 }
