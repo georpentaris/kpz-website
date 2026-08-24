@@ -618,6 +618,17 @@ html {
         padding: 80px 20px;
     }
 
+    .spotify-player {
+        max-width: 800px;
+        margin: 0 auto 60px;
+    }
+
+    .spotify-player iframe {
+        width: 100%;
+        border: 0;
+        border-radius: 12px;
+    }
+
     .listen-links {
         flex-direction: column;
 
