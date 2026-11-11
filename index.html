@@ -1,279 +1,256 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Discover KPZ, a composer exploring the connection between classical music and poetry.">
+    <meta name="theme-color" content="#0c0c0c">
 
-    <title>Artist Name</title>
+    <title>KPZ | Composer & Music</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
 </head>
 
 <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
 
-    <header>
+    <header class="site-header">
+        <nav aria-label="Main navigation">
+            <a class="logo" href="#home" aria-label="KPZ — Home">KPZ</a>
 
-    <nav>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#biography">Biography</a></li>
+                <li><a href="#works">Works</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#listen">Listen</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
 
-        <div class="logo">
-            KPZ
-        </div>
-
-
-        <ul class="nav-links">
-
-            <li><a href="#home">Home</a></li>
-
-            <li><a href="#biography">Biography</a></li>
-
-            <li><a href="#works">Works</a></li>
-
-            <li><a href="#listen">Listen</a></li>
-
-            <li><a href="#contact">Contact</a></li>
-
-        </ul>
-
-
-        <div class="menu-toggle">
-
-            <span></span>
-            <span></span>
-            <span></span>
-
-        </div>
-
-    </nav>
-
+            <button class="menu-toggle"
+                    type="button"
+                    aria-label="Open navigation"
+                    aria-controls="nav-links"
+                    aria-expanded="false">
+                <span class="hamburger-icon" aria-hidden="true">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+                <span class="menu-label">MENU</span>
+            </button>
+        </nav>
     </header>
 
+    <main id="main-content">
 
-    <main>
-
+        <!-- HERO -->
         <section id="home" class="hero">
-
             <div class="hero-content">
-
-                <h2>Artist Name</h2>
-
-                <p>
-                    Music, creativity and stories.
-                </p>
-
-                <a href="#listen" class="button">
-                    Listen Now
-                </a>
-                
+                <p class="hero-eyebrow">COMPOSER & ARTIST</p>
+                <h1>KPZ</h1>
+                <p class="hero-tagline">Where Poetry Meets Music</p>
+                <a href="#listen" class="button">Explore the Music</a>
             </div>
 
+            <a href="#biography"
+               class="scroll-indicator"
+               aria-label="Scroll to biography">
+                <span>SCROLL TO EXPLORE</span>
+                <span class="scroll-line" aria-hidden="true"></span>
+            </a>
         </section>
 
+        <!-- BIOGRAPHY -->
         <section id="biography" class="biography">
-
-            <div class="bio-image">
-
-                <img src="images/kpz.jpg" alt="KPZ Composer">
-
+            <div class="bio-image reveal">
+                <img src="images/kpz.jpg"
+                     alt="Portrait of composer KPZ"
+                     loading="lazy"
+                     decoding="async">
             </div>
 
-
-            <div class="bio-text">
-
+            <div class="bio-text reveal">
+                <p class="section-label">THE ARTIST</p>
                 <h2>About KPZ</h2>
 
-
                 <p>
-                    KPZ is a composer whose work explores the connection
-                    between classical music and poetry.
+                    KPZ is a composer whose work explores the
+                    connection between classical music and poetry.
                 </p>
 
-
                 <p>
-                    Through musical expression, KPZ brings poetic texts
-                    to life and creates contemporary interpretations
-                    inspired by timeless artistic works.
+                    Through musical expression, KPZ brings poetic
+                    texts to life and creates contemporary
+                    interpretations inspired by timeless artistic works.
                 </p>
-
             </div>
-
         </section>
 
+        <!-- WORKS -->
         <section id="works" class="works">
+            <div class="section-title reveal">
+                <p class="section-label">SELECTED WORKS</p>
+                <h2>Music &amp; Poetry</h2>
+            </div>
 
-        <div class="section-title">
+            <div class="works-grid">
+                <article class="work-card reveal">
+                    <div class="work-image">
+                        <img src="images/work-1.jpg"
+                             alt="Artwork for featured composition one"
+                             loading="lazy"
+                             decoding="async">
+                    </div>
 
-            <p class="section-label">Selected Works</p>
+                    <div class="work-content">
+                        <h3>Work Title</h3>
+                        <p>Poet Name</p>
+                        <a href="#listen" class="work-link">
+                            Listen <span aria-hidden="true">↗</span>
+                        </a>
+                    </div>
+                </article>
 
-            <h2>Music & Poetry</h2>
+                <article class="work-card reveal">
+                    <div class="work-image">
+                        <img src="images/work-2.jpg"
+                             alt="Artwork for featured composition two"
+                             loading="lazy"
+                             decoding="async">
+                    </div>
 
-        </div>
+                    <div class="work-content">
+                        <h3>Work Title</h3>
+                        <p>Poet Name</p>
+                        <a href="#listen" class="work-link">
+                            Listen <span aria-hidden="true">↗</span>
+                        </a>
+                    </div>
+                </article>
 
+                <article class="work-card reveal">
+                    <div class="work-image">
+                        <img src="images/work-3.jpg"
+                             alt="Artwork for featured composition three"
+                             loading="lazy"
+                             decoding="async">
+                    </div>
 
-        <div class="works-grid">
+                    <div class="work-content">
+                        <h3>Work Title</h3>
+                        <p>Poet Name</p>
+                        <a href="#listen" class="work-link">
+                            Listen <span aria-hidden="true">↗</span>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
 
-            <article class="work-card">
+        <!-- EVENTS -->
+        <section id="events" class="events">
+            <div class="section-title reveal">
+                <p class="section-label">LIVE PERFORMANCES</p>
+                <h2>Upcoming Events</h2>
+            </div>
 
-                <img src="images/work-1.jpg" alt="KPZ musical work">
+            <div class="events-content reveal">
+                <span class="events-decoration"
+                      aria-hidden="true">✦</span>
 
-                <div class="work-content">
+                <h3>Something Beautiful Is Coming</h3>
 
-                    <h3>Work Title</h3>
+                <p>
+                    New performances will be announced soon.
+                </p>
 
-                    <p>Poet Name</p>
+                <span class="events-divider"
+                      aria-hidden="true"></span>
 
-                    <a href="#" class="work-link">
-                        Listen →
-                    </a>
+                <p class="events-note">
+                    Stay tuned for upcoming events.
+                </p>
+            </div>
+        </section>
 
+        <!-- LISTEN -->
+        <section id="listen" class="listen">
+            <div class="section-title reveal">
+                <p class="section-label">LISTEN</p>
+                <h2>Discover the Music</h2>
+            </div>
+
+            <div class="spotify-player reveal">
+                <iframe
+                    title="Listen to KPZ on Spotify"
+                    src="https://open.spotify.com/embed/artist/136rba1OE9Ua2kAHzqPA8u?theme=0"
+                    width="100%"
+                    height="352"
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy">
+                </iframe>
+            </div>
+
+            <div class="listen-links reveal">
+                <a href="https://open.spotify.com/artist/136rba1OE9Ua2kAHzqPA8u"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Spotify ↗
+                </a>
+
+                <span class="coming-soon">YouTube · Soon</span>
+                <span class="coming-soon">Apple Music · Soon</span>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="contact">
+            <div class="section-title reveal">
+                <p class="section-label">CONTACT</p>
+                <h2>Get in Touch</h2>
+            </div>
+
+            <div class="reveal">
+                <p class="contact-description">
+                    For collaborations, performances and other enquiries.
+                </p>
+
+                <a class="contact-email"
+                   href="mailto:email@example.com">
+                    email@example.com
+                </a>
+
+                <div class="social-links">
+                    <span class="coming-soon">Instagram</span>
+                    <span class="coming-soon">Facebook</span>
+                    <span class="coming-soon">TikTok</span>
                 </div>
-
-            </article>
-
-
-            <article class="work-card">
-
-                <img src="images/work-2.jpg" alt="KPZ musical work">
-
-                <div class="work-content">
-
-                    <h3>Work Title</h3>
-
-                    <p>Poet Name</p>
-
-                    <a href="#" class="work-link">
-                        Listen →
-                    </a>
-
-                </div>
-
-            </article>
-
-
-            <article class="work-card">
-
-                <img src="images/work-3.jpg" alt="KPZ musical work">
-
-                <div class="work-content">
-
-                    <h3>Work Title</h3>
-
-                    <p>Poet Name</p>
-
-                    <a href="#" class="work-link">
-                        Listen →
-                    </a>
-
-                </div>
-
-            </article>
-
-        </div>
-
-    </section>
-
-    <section id="listen" class="listen">
-
-        <div class="section-title">
-            <p class="section-label">Listen</p>
-            <h2>Discover the Music</h2>
-        </div>
-
-
-        <div class="spotify-player">
-
-           <iframe 
-                data-testid="embed-iframe" 
-                style="border-radius:12px" 
-                src="https://open.spotify.com/embed/artist/136rba1OE9Ua2kAHzqPA8u?utm_source=generator&theme=0&si=dde09b9aaaf94147" 
-                width="100%" 
-                height="352" 
-                frameBorder="0" 
-                allowfullscreen="" 
-                allow="autoplay; 
-                clipboard-write; 
-                encrypted-media; 
-                fullscreen; 
-                picture-in-picture" 
-                loading="lazy">
-            </iframe>
-
-        </div>
-
-
-        <div class="listen-links">
-
-            <a href="#" target="_blank" rel="noopener noreferrer">
-                Spotify
-            </a>
-
-            <a href="#" target="_blank" rel="noopener noreferrer">
-                YouTube
-            </a>
-
-            <a href="#" target="_blank" rel="noopener noreferrer">
-                Apple Music
-            </a>
-
-        </div>
-
-    </section>
-
-    <section id="contact" class="contact">
-
-        <div class="section-title">
-            <p class="section-label">Contact</p>
-            <h2>Get in Touch</h2>
-        </div>
-
-        <p class="contact-description">
-            For collaborations, performances and other enquiries.
-        </p>
-
-        <a class="contact-email" href="mailto:email@example.com">
-            email@example.com
-        </a>
-
-        <div class="social-links">
-
-            <a href="#" target="_blank" rel="noopener noreferrer">
-                Instagram
-            </a>
-
-            <a href="#" target="_blank" rel="noopener noreferrer">
-                Facebook
-            </a>
-
-            <a href="#" target="_blank" rel="noopener noreferrer">
-                TikTok
-            </a>
-
-        </div>
-
-    </section>
+            </div>
+        </section>
 
     </main>
 
-
-   <footer class="footer">
-
-        <div class="footer-logo">
-            KPZ
-        </div>
-
-        <p class="footer-tagline">
-            Music • Poetry • Composition
-        </p>
-
+    <footer class="footer">
+        <a href="#home" class="footer-logo">KPZ</a>
+        <p class="footer-tagline">Music • Poetry • Composition</p>
         <p class="footer-copyright">
             © 2026 KPZ. All rights reserved.
         </p>
-
     </footer>
 
-
-<script src="js/script.js"></script>
-
+    <!-- BACK TO TOP -->
+    <a href="#home"
+       class="back-to-top"
+       aria-label="Back to top"
+       tabindex="-1">
+        <span aria-hidden="true">↑</span>
+    </a>
 </body>
-
 </html>
