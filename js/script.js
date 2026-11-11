@@ -159,3 +159,118 @@ window.addEventListener('scroll', updateActiveSection, {
 
 window.addEventListener('resize', updateActiveSection);
 updateActiveSection();
+
+
+// =====================================
+// SELECTED WORKS — MOBILE CAROUSEL
+// =====================================
+
+const worksGrid = document.querySelector('.works-grid');
+const worksCards = worksGrid
+    ? [...worksGrid.querySelectorAll('.work-card')]
+    : [];
+
+const prevWork = document.querySelector('.works-prev');
+const nextWork = document.querySelector('.works-next');
+const worksDots = document.querySelector('.works-dots');
+
+if (
+    worksGrid &&
+    worksCards.length > 0 &&
+    prevWork &&
+    nextWork &&
+    worksDots
+) {
+    let currentWork = 0;
+
+    const dots = worksCards.map((_, index) => {
+        const dot = document.createElement('button');
+
+        dot.type = 'button';
+        dot.className = 'works-dot';
+        dot.setAttribute(
+            'aria-label',
+            `Go to work ${index + 1}`
+        );
+
+        dot.addEventListener('click', () => {
+            goToWork(index);
+        });
+
+        worksDots.appendChild(dot);
+        return dot;
+    });
+
+    const updateControls = () => {
+        prevWork.disabled = currentWork === 0;
+        nextWork.disabled =
+            currentWork === worksCards.length - 1;
+
+        dots.forEach((dot, index) => {
+            const active = index === currentWork;
+
+            dot.classList.toggle('active', active);
+            dot.setAttribute('aria-pressed', String(active));
+        });
+    };
+
+    const goToWork = (index) => {
+        currentWork = Math.max(
+            0,
+            Math.min(index, worksCards.length - 1)
+        );
+
+        worksGrid.scrollTo({
+            left: worksCards[currentWork].offsetLeft
+                - worksCards[0].offsetLeft,
+            behavior: prefersReducedMotion.matches
+                ? 'instant'
+                : 'smooth'
+        });
+
+        updateControls();
+    };
+
+    prevWork.addEventListener('click', () => {
+        goToWork(currentWork - 1);
+    });
+
+    nextWork.addEventListener('click', () => {
+        goToWork(currentWork + 1);
+    });
+
+    // Update active dot when the user swipes.
+
+    let scrollFrame = null;
+
+    worksGrid.addEventListener('scroll', () => {
+        if (scrollFrame !== null) {
+            cancelAnimationFrame(scrollFrame);
+        }
+
+        scrollFrame = requestAnimationFrame(() => {
+            const cardWidth =
+                worksCards[0].getBoundingClientRect().width;
+
+            const step =
+                cardWidth +
+                parseFloat(getComputedStyle(worksGrid).gap || 0);
+
+            if (step > 0) {
+                currentWork = Math.max(
+                    0,
+                    Math.min(
+                        Math.round(worksGrid.scrollLeft / step),
+                        worksCards.length - 1
+                    )
+                );
+
+                updateControls();
+            }
+
+            scrollFrame = null;
+        });
+    }, { passive: true });
+
+    updateControls();
+}

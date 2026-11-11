@@ -3,15 +3,17 @@
    KPZ — GLOBAL
 ===================================== */
 
+
 :root {
-    --bg: #0c0c0c;
-    --bg-soft: #141414;
-    --gold: #d4af37;
-    --white: #f5f0e6;
-    --muted: #aaa;
-    --paper: #f5f3ee;
+    --bg: #191114;
+    --bg-soft: #24171C;
+    --gold: #B77A83;
+    --white: #F5EDE7;
+    --muted: #B5A4A6;
+    --paper: #F5EDE7;
     --nav-height: 80px;
 }
+
 
 *,
 *::before,
@@ -108,7 +110,7 @@ section {
 
 .site-header.scrolled {
     background: rgba(8, 8, 8, .94);
-    border-color: rgba(212, 175, 55, .15);
+    border-color: rgba(183, 122, 131, .15);
     box-shadow: 0 8px 30px rgba(0, 0, 0, .15);
 }
 
@@ -182,7 +184,7 @@ nav {
     gap: 10px;
     min-height: 44px;
     padding: 10px 12px;
-    border: 1px solid rgba(212, 175, 55, .5);
+    border: 1px solid rgba(183, 122, 131, .5);
     border-radius: 6px;
     background: transparent;
     color: var(--gold);
@@ -191,7 +193,7 @@ nav {
 }
 
 .menu-toggle:hover {
-    background: rgba(212, 175, 55, .1);
+    background: rgba(183, 122, 131, .1);
 }
 
 .hamburger-icon {
@@ -454,7 +456,7 @@ nav {
 
 .work-card:hover {
     transform: translateY(-7px);
-    border-color: rgba(212,175,55,.5);
+    border-color: rgba(183,175,55,.5);
     box-shadow: 0 18px 40px rgba(0,0,0,.25);
 }
 
@@ -522,7 +524,7 @@ nav {
     max-width: 680px;
     margin: auto;
     padding: 65px 35px;
-    border: 1px solid rgba(212,175,55,.22);
+    border: 1px solid rgba(183,175,55,.22);
     border-radius: 10px;
     background: rgba(255,255,255,.02);
     transition:
@@ -531,8 +533,8 @@ nav {
 }
 
 .events-content:hover {
-    border-color: rgba(212,175,55,.5);
-    box-shadow: 0 0 45px rgba(212,175,55,.035);
+    border-color: rgba(183,175,55,.5);
+    box-shadow: 0 0 45px rgba(183,175,55,.035);
 }
 
 .events-decoration {
@@ -703,7 +705,7 @@ nav {
     place-items: center;
     width: 46px;
     height: 46px;
-    border: 1px solid rgba(212,175,55,.5);
+    border: 1px solid rgba(183,175,55,.5);
     border-radius: 50%;
     background: #171717;
     color: var(--gold);
@@ -858,7 +860,7 @@ nav {
         flex-direction: column;
         gap: 8px;
         background: rgba(8,8,8,.98);
-        border-top: 1px solid rgba(212,175,55,.2);
+        border-top: 1px solid rgba(183,175,55,.2);
         box-shadow: 0 20px 35px rgba(0,0,0,.3);
     }
 
@@ -981,5 +983,366 @@ nav {
     .bio-image:hover img,
     .button:hover {
         transform: none;
+    }
+}
+
+
+/* =====================================
+   SOCIAL MEDIA & MUSIC PLATFORM ICONS
+===================================== */
+
+.platform-link,
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 12px 18px;
+    border: 1px solid rgba(183, 122, 131, 0.22);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.025);
+    color: #f5f0e6;
+    font-size: 14px;
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        background 0.3s ease;
+}
+
+.platform-link i,
+.social-link i {
+    color: #B77A83;
+    font-size: 23px;
+    transition: transform 0.3s ease;
+}
+
+.platform-link small {
+    color: #888;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+a.platform-link:hover,
+a.social-link:hover {
+    transform: translateY(-4px);
+    border-color: #B77A83;
+    background: rgba(183, 122, 131, 0.08);
+    color: #B77A83;
+}
+
+a.platform-link:hover i,
+a.social-link:hover i {
+    transform: scale(1.12);
+}
+
+.platform-soon,
+.social-soon {
+    opacity: 0.7;
+    cursor: default;
+}
+
+/* Override old link styling */
+
+.listen-links a.platform-link {
+    color: #f5f0e6;
+    padding: 12px 18px;
+}
+
+.listen-links a.platform-link:hover {
+    color: #B77A83;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .listen-links,
+    .social-links {
+        gap: 12px;
+    }
+
+    .platform-link,
+    .social-link {
+        padding: 12px 14px;
+        font-size: 13px;
+    }
+
+    .platform-link i,
+    .social-link i {
+        font-size: 21px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .platform-link,
+    .social-link,
+    .platform-link i,
+    .social-link i {
+        transition: none;
+    }
+}
+
+
+
+/* =====================================
+   KPZ — BURGUNDY & CREAM THEME
+===================================== */
+
+/* Navigation */
+
+.site-header {
+    background: rgba(25, 17, 20, 0.75);
+}
+
+.site-header.scrolled {
+    background: rgba(25, 17, 20, 0.96);
+    border-color: rgba(183, 122, 131, 0.25);
+}
+
+/* Hero */
+
+.hero {
+    background: #191114;
+}
+
+.hero::after {
+    background: linear-gradient(
+        180deg,
+        rgba(25, 17, 20, 0.55),
+        rgba(25, 17, 20, 0.45) 45%,
+        rgba(25, 17, 20, 0.9)
+    );
+}
+
+/* Main button */
+
+.button {
+    background: #B77A83;
+    border-color: #B77A83;
+    color: #191114;
+}
+
+.button:hover {
+    background: #F5EDE7;
+    border-color: #F5EDE7;
+    color: #191114;
+}
+
+/* Biography */
+
+.biography {
+    background: #F5EDE7;
+    color: #291B20;
+}
+
+.bio-text p:not(.section-label) {
+    color: #59484E;
+}
+
+/* Works */
+
+.works {
+    background: #191114;
+}
+
+.work-card {
+    background: #24171C;
+    border-color: #422A32;
+}
+
+.work-card:hover {
+    border-color: #B77A83;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
+}
+
+/* Events */
+
+.events {
+    background: #24171C;
+}
+
+.events-content {
+    background: rgba(245, 237, 231, 0.025);
+    border-color: rgba(183, 122, 131, 0.35);
+}
+
+.events-content:hover {
+    border-color: #B77A83;
+    box-shadow: 0 0 40px rgba(183, 122, 131, 0.08);
+}
+
+.events-content p {
+    color: #D0BFC0;
+}
+
+/* Listen */
+
+.listen {
+    background: #191114;
+}
+
+.spotify-player {
+    border-color: #422A32;
+}
+
+/* Contact */
+
+.contact {
+    background: #24171C;
+}
+
+.contact-description {
+    color: #D0BFC0;
+}
+
+/* Footer */
+
+.footer {
+    background: #130D10;
+}
+
+/* Social media & platform icons */
+
+.platform-link,
+.social-link {
+    background: rgba(245, 237, 231, 0.035);
+    border-color: rgba(183, 122, 131, 0.35);
+    color: #F5EDE7;
+}
+
+.platform-link i,
+.social-link i {
+    color: #B77A83;
+}
+
+a.platform-link:hover,
+a.social-link:hover {
+    background: rgba(183, 122, 131, 0.12);
+    border-color: #B77A83;
+    color: #F5EDE7;
+}
+
+/* Mobile menu */
+
+@media (max-width: 768px) {
+    .nav-links {
+        background: rgba(25, 17, 20, 0.98);
+        border-top-color: rgba(183, 122, 131, 0.3);
+    }
+}
+
+
+
+/* =====================================
+   SELECTED WORKS — MOBILE CAROUSEL
+===================================== */
+
+/* Hidden on desktop */
+
+.works-carousel-controls {
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    .works-grid {
+        display: flex;
+        gap: 16px;
+        max-width: 480px;
+        margin: 0 auto;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-padding-inline: 0;
+        overscroll-behavior-x: contain;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .works-grid::-webkit-scrollbar {
+        display: none;
+    }
+
+    .works-grid .work-card {
+        display: block;
+        flex: 0 0 100%;
+        min-width: 0;
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+    }
+
+    .works-grid .work-card:hover {
+        transform: none;
+    }
+
+    /* Carousel controls */
+
+    .works-carousel-controls {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 25px;
+        margin-top: 28px;
+    }
+
+    .works-prev,
+    .works-next {
+        display: grid;
+        place-items: center;
+        width: 42px;
+        height: 42px;
+        border: 1px solid rgba(183, 122, 131, 0.5);
+        border-radius: 50%;
+        background: #291B20;
+        color: #F5EDE7;
+        font-size: 14px;
+        cursor: pointer;
+        transition:
+            background 0.25s ease,
+            border-color 0.25s ease;
+    }
+
+    .works-prev:hover,
+    .works-next:hover {
+        background: #B77A83;
+        border-color: #B77A83;
+        color: #191114;
+    }
+
+    .works-prev:disabled,
+    .works-next:disabled {
+        opacity: 0.3;
+        cursor: not-allowed;
+    }
+
+    .works-dots {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+    }
+
+    .works-dot {
+        width: 9px;
+        height: 9px;
+        padding: 0;
+        border: 0;
+        border-radius: 50%;
+        background: #665057;
+        cursor: pointer;
+        transition:
+            width 0.25s ease,
+            background 0.25s ease;
+    }
+
+    .works-dot.active {
+        width: 23px;
+        border-radius: 20px;
+        background: #B77A83;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .works-grid {
+        scroll-behavior: auto;
     }
 }

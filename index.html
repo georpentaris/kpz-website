@@ -12,6 +12,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
@@ -152,6 +154,23 @@
                     </div>
                 </article>
             </div>
+
+            <div class="works-carousel-controls" aria-label="Works navigation">
+                <button class="works-prev"
+                        type="button"
+                        aria-label="Previous work">
+                    <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+                </button>
+
+                <div class="works-dots" aria-label="Choose a work"></div>
+
+                <button class="works-next"
+                        type="button"
+                        aria-label="Next work">
+                    <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                </button>
+            </div>
+
         </section>
 
         <!-- EVENTS -->
@@ -198,16 +217,38 @@
                 </iframe>
             </div>
 
+            
             <div class="listen-links reveal">
+
                 <a href="https://open.spotify.com/artist/136rba1OE9Ua2kAHzqPA8u"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    Spotify ↗
+                target="_blank"
+                rel="noopener noreferrer"
+                class="platform-link">
+
+                    <i class="fa-brands fa-spotify" aria-hidden="true"></i>
+                    <span>Spotify</span>
                 </a>
 
-                <span class="coming-soon">YouTube · Soon</span>
-                <span class="coming-soon">Apple Music · Soon</span>
+               <a href="https://youtube.com/@kzavoleas"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="platform-link">
+
+                    <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+                    <span>YouTube</span>
+                </a>
+
+                <a href="https://music.apple.com/us/artist/kyriakos-zavoleas/1802315003"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="platform-link">
+
+                    <i class="fa-brands fa-apple" aria-hidden="true"></i>
+                    <span>Apple Music</span>
+                </a>
+
             </div>
+
         </section>
 
         <!-- CONTACT -->
@@ -227,11 +268,32 @@
                     email@example.com
                 </a>
 
-                <div class="social-links">
-                    <span class="coming-soon">Instagram</span>
-                    <span class="coming-soon">Facebook</span>
-                    <span class="coming-soon">TikTok</span>
-                </div>
+
+            <div class="social-links">
+
+                <a href="https://www.instagram.com/kzavoleas/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="social-link">
+                    <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                    <span>Instagram</span>
+                </a>
+                
+                <a href="https://www.facebook.com/kzavoleas/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="social-link">
+                    <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+                    <span>Facebook</span>
+                </a>
+
+                <span class="social-link social-soon">
+                    <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+                    <span>TikTok</span>
+                </span>
+
+            </div>
+
             </div>
         </section>
 
